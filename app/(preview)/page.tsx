@@ -204,7 +204,7 @@ export default function Home() {
 
             {isLoading &&
               messages[messages.length - 1].role !== "assistant" && (
-                <div className="flex flex-row gap-2 px-4 w-full md:w-[500px] md:px-0">
+                <div className="flex flex-row gap-2 px-4 w-full md:w-[700px] md:px-0">
                   <div className="size-[24px] flex flex-col justify-center items-center flex-shrink-0 text-zinc-400">
                     <BotIcon />
                   </div>
