@@ -130,8 +130,18 @@ export default function Home() {
   }, [messages]);
 
   return (
+<>
+    <div className="flex flex-col justify-center items-center pb-20 h-dvh bg-white dark:bg-zinc-900">
+      {/* Header */}
+      <header className="text-center py-6 w-full bg-blue-600 text-white">
+        <h1 className="text-3xl font-bold">Facebook Support AI Chatbot</h1>
+        <p className="text-lg mt-2">
+          Your virtual assistant for resolving any Facebook-related queries.
+        </p>
+      </header>
+
     <div
-      className="flex flex-row justify-center pb-20 h-dvh bg-white dark:bg-zinc-900"
+      className="flex flex-row justify-center h-dvh bg-white dark:bg-zinc-900"
       onDragOver={handleDragOver}
       onDragLeave={handleDragLeave}
       onDrop={handleDrop}
@@ -158,8 +168,8 @@ export default function Home() {
             {messages.map((message, index) => (
               <motion.div
                 key={message.id}
-                className={`flex flex-row gap-2 px-4 w-full md:w-[500px] md:px-0 ${
-                  index === 0 ? "pt-20" : ""
+                className={`flex flex-row gap-2 px-4 w-full md:w-[700px] md:px-0 ${
+                  index === 0 ? "pt-10" : ""
                 }`}
                 initial={{ y: 5, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
@@ -246,7 +256,7 @@ export default function Home() {
         >
           <AnimatePresence>
             {files && files.length > 0 && (
-              <div className="flex flex-row gap-2 absolute bottom-12 px-4 w-full md:w-[500px] md:px-0">
+              <div className="flex flex-row gap-2 absolute bottom-12 px-4 w-full md:w-[700px] md:px-0">
                 {Array.from(files).map((file) =>
                   file.type.startsWith("image") ? (
                     <div key={file.name}>
@@ -287,7 +297,7 @@ export default function Home() {
 
           <input
             ref={inputRef}
-            className="bg-zinc-100 rounded-md px-2 py-1.5 w-full outline-none dark:bg-zinc-700 text-zinc-800 dark:text-zinc-300 md:max-w-[500px] max-w-[calc(100dvw-32px)]"
+            className="bg-zinc-100 rounded-md px-2 py-1.5 w-full outline-none dark:bg-zinc-700 text-zinc-800 dark:text-zinc-300 md:max-w-[700px] max-w-[calc(100dvw-32px)]"
             placeholder="Send a message..."
             value={input}
             onChange={handleInputChange}
@@ -296,5 +306,7 @@ export default function Home() {
         </form>
       </div>
     </div>
+    </div>
+    </>
   );
 }
