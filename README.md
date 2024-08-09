@@ -1,41 +1,111 @@
-# Vercel AI SDK useChat with Attachments Example
+# Facebook Support AI Chatbot
 
-This example demonstrates how to use the [Vercel AI SDK](https://sdk.vercel.ai/docs) with [Next.js](https://nextjs.org/) with the `useChat` hook to create a chat interface that can send and receive multi-modal messages from the AI provider of your choice.
+This project is a web-based AI chatbot designed to help users resolve their queries and problems related to Facebook. The chatbot interacts with users via a user-friendly interface, providing support and answers to various questions about Facebook.
 
-## Deploy your own
+## Features
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel-labs%2Fai-sdk-preview-attachments&env=OPENAI_API_KEY&envDescription=API%20keys%20needed%20for%20application&envLink=platform.openai.com)
+- **User-Friendly Interface:** The chatbot interface is designed to be intuitive and easy to use.
+- **AI-Powered Responses:** The chatbot leverages AI to understand user queries and provide relevant answers.
+- **File Attachments:** Users can upload images or text files, and the chatbot can process these attachments.
+- **Custom Welcome Message:** The chatbot greets users with a custom message to inform them about its purpose.
 
-## How to use
+## Technologies Used
 
-Run [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+- **TypeScript:** For type-safe and scalable JavaScript development.
+- **Next.js:** A React framework for building server-side rendered applications.
+- **Framer Motion:** For smooth animations and transitions.
+- **Sonner:** For toast notifications.
+- **Vercel AI SDK:** For integrating AI capabilities into the chatbot.
+- **Markdown:** For rendering formatted text in the chat.
+
+## Getting Started
+
+### Prerequisites
+
+- **Node.js** (version 16 or higher)
+- **npm** or **yarn** (for package management)
+
+### Installation
+
+1. **Clone the Repository:**
+
+   ```bash
+   git clone https://github.com/your-username/facebook-support-chatbot.git
+   ```
+
+2. **Navigate to the Project Directory:**
+
+   ```bash
+   cd facebook-support-chatbot
+   ```
+
+3. **Install Dependencies:**
+
+   Using npm:
+
+   ```bash
+   npm install
+   ```
+
+   Or using yarn:
+
+   ```bash
+   yarn install
+   ```
+
+### Running the Application
+
+To run the application in development mode:
 
 ```bash
-npx create-next-app --example https://github.com/vercel-labs/ai-sdk-preview-attachments ai-sdk-preview-attachments-example
+npm run dev
 ```
+
+Or with yarn:
 
 ```bash
-yarn create next-app --example https://github.com/vercel-labs/ai-sdk-preview-attachments ai-sdk-preview-attachments-example
+yarn dev
 ```
+
+The application should now be running on `http://localhost:3000`.
+
+### Building for Production
+
+To create a production build:
 
 ```bash
-pnpm create next-app --example https://github.com/vercel-labs/ai-sdk-preview-attachments ai-sdk-preview-attachments-example
+npm run build
 ```
 
-To run the example locally you need to:
+Or with yarn:
 
-1. Sign up for accounts with the AI providers you want to use (e.g., OpenAI, Anthropic).
-2. Obtain API keys for each provider.
-3. Set the required environment variables as shown in the `.env.example` file, but in a new file called `.env`.
-4. `npm install` to install the required dependencies.
-5. `npm run dev` to launch the development server.
+```bash
+yarn build
+```
 
+### Deployment
 
-## Learn More
+You can deploy this project to any hosting platform that supports Node.js applications. For seamless deployment, consider using [Vercel](https://vercel.com/).
 
-To learn more about Vercel AI SDK or Next.js take a look at the following resources:
+## Contributing
 
-- [Vercel AI SDK docs](https://sdk.vercel.ai/docs)
-- [Vercel AI Playground](https://play.vercel.ai)
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+Contributions are welcome! Please fork this repository and submit a pull request with your changes.
 
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgements
+
+- **OpenAI** for providing the AI model used for generating responses.
+- **Vercel** for hosting and providing an easy-to-use platform for deploying Next.js applications.
+- **Framer Motion** for enabling smooth animations.
+- **Sonner** for simple and effective toast notifications.
+```
+
+### Notes:
+- Replace `"your-username"` in the clone command with your actual GitHub username.
+- Update the project name, description, and links as per your needs.
+- The `LICENSE` section assumes you're using the MIT License; you can change this based on your actual license.
+
+This `README.md` should give potential users and contributors a clear overview of your project and how to get started with it.
