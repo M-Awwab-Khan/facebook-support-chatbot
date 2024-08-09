@@ -40,7 +40,7 @@ function TextFilePreview({ file }: { file: File }) {
 }
 
 export default function Home() {
-  const { messages, input, handleSubmit, handleInputChange, isLoading } =
+  const { messages, input, handleSubmit, handleInputChange, isLoading, setMessages } =
     useChat({
       onError: () =>
         toast.error("You've been rate limited, please try again later!"),
@@ -49,6 +49,17 @@ export default function Home() {
   const [files, setFiles] = useState<FileList | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const [isDragging, setIsDragging] = useState(false);
+
+
+ // Adding an initial assistant message when the component mounts
+ useEffect(() => {
+    setMessages([...messages, {
+      id: "intro-message",
+      role: "assistant",
+      content:
+        "Hello! I’m here to help you with any queries you have regarding Facebook. How can I assist you today?",
+    }]);
+  }, []);
 
   const handlePaste = (event: React.ClipboardEvent) => {
     const items = event.clipboardData?.items;
