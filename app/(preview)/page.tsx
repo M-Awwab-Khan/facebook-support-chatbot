@@ -131,7 +131,7 @@ export default function Home() {
 
   return (
 <>
-    <div className="flex flex-col justify-center items-center pb-20 h-dvh bg-white dark:bg-zinc-900">
+    <div className="flex flex-col justify-center items-center pb-20 bg-white dark:bg-zinc-900 overflow-y-auto">
       {/* Header */}
       <header className="text-center py-6 w-full bg-blue-600 text-white">
         <h1 className="text-3xl font-bold">Facebook Support AI Chatbot</h1>
@@ -141,7 +141,7 @@ export default function Home() {
       </header>
 
     <div
-      className="flex flex-row justify-center h-dvh bg-white dark:bg-zinc-900"
+      className="flex flex-row justify-center bg-white dark:bg-zinc-900"
       onDragOver={handleDragOver}
       onDragLeave={handleDragLeave}
       onDrop={handleDrop}
@@ -164,7 +164,7 @@ export default function Home() {
 
       <div className="flex flex-col justify-between gap-4">
         {messages.length > 0 ? (
-          <div className="flex flex-col gap-2 h-full w-dvw items-center overflow-y-scroll">
+          <div className="flex flex-col gap-2 h-full items-center">
             {messages.map((message, index) => (
               <motion.div
                 key={message.id}
