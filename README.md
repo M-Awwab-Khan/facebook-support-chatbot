@@ -102,10 +102,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Framer Motion** for enabling smooth animations.
 - **Sonner** for simple and effective toast notifications.
 ```
-
-### Notes:
-- Replace `"your-username"` in the clone command with your actual GitHub username.
-- Update the project name, description, and links as per your needs.
-- The `LICENSE` section assumes you're using the MIT License; you can change this based on your actual license.
-
-This `README.md` should give potential users and contributors a clear overview of your project and how to get started with it.
